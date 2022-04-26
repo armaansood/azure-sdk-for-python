@@ -8,7 +8,7 @@ param(
   [Parameter(Mandatory = $true)]
   $BranchPrefix,  
   # Date format: e.g. Tuesday, April 12, 2022 1:36:02 PM. Allow to use other date format.
-  $LastCommitOlderThan=$env:LASTCOMMITDATEOVERRIDE,
+  [DateTime]$LastCommitOlderThan=$env:LASTCOMMITDATEOVERRIDE,
   [Parameter(Mandatory = $true)]
   $AuthToken
 )
