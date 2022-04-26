@@ -65,7 +65,7 @@ foreach ($res in $responses)
   } 
   LogDebug "Branch [ $branchName ] in repo [ $RepoId ] has no associated open Pull Request. "
   try {
-    Remove-GitHubSourceReferences -RepoId $RepoId -Ref ($branch -replace "refs/") -AuthToken $AuthToken
+    Remove-GitHubSourceReferences -RepoId $RepoId -Ref $branch -AuthToken $AuthToken
   }
   catch {
     LogError "Remove-GitHubSourceReferences failed with exception:`n$_"
