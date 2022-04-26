@@ -63,7 +63,7 @@ foreach ($res in $responses)
       continue
     }
   } 
-  LogDebug "Branch [ $branchName ] in repo [ $RepoId ] has no associated open Pull Request. Deleting Branch"
+  LogDebug "Branch [ $branchName ] in repo [ $RepoId ] has no associated open Pull Request. "
   try {
     Remove-GitHubSourceReferences -RepoId $RepoId -Ref ($branch -replace "refs/") -AuthToken $AuthToken
   }
